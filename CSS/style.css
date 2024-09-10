@@ -20,10 +20,25 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: rgb(168, 177, 168);
+    animation:infinite mudancaFundo 5s;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+@keyframes mudancaFundo{
+    0%{
+        background-color: #6424a069;
+    }
+
+    50%{
+        background-color: #57197a;
+    }
+
+    100%{
+        background-color: #4b0f74;
+    }
+
 }
 
 .main-inicial {
@@ -145,8 +160,33 @@ footer img:hover {
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
+    animation: moveExperiencia 6s linear infinite;
+    background-color: red;
+    border-radius: 50px;
 
 
+}
+
+@keyframes moveExperiencia{
+    0%{
+        transform: translate(0, 0);
+    }
+
+    25%{
+        transform: translate(-200px, 0);
+    }
+
+    50%{
+        transform: translate(-200px, -200px);
+    }
+
+    75%{
+        transform: translate(0, -200px);
+    }
+
+    100%{
+        transform: translate(0, 0);
+    }
 }
 
 .curso {
