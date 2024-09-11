@@ -157,17 +157,46 @@ footer img:hover {
 
 .experiencias {
     position: absolute;
-    transform: translate(-50%, -50%);
+    transform: rotate(40drg);
     top: 50%;
     left: 50%;
-    animation: moveExperiencia 6s linear infinite;
+    animation: moverItem 5s linear infinite;
+    /* animation: moveExperiencia 6s linear infinite; */
     background-color: red;
     border-radius: 50px;
 
 
 }
 
-@keyframes moveExperiencia{
+@keyframes moverItem{
+    0%{
+        top: 20%;
+        left: 50%;
+    }
+
+    25%{
+        top: 50%;
+        left: 80%;
+    }
+
+    50%{
+        top: 90%;
+        left: 50%;
+    }
+
+    75%{
+        top: 50%;
+        left: 10%;
+    }
+
+    100%{
+        top: 20%;
+        left: 50%;
+
+    }
+}
+
+/* @keyframes moveExperiencia{
     0%{
         transform: translate(0, 0);
     }
@@ -187,7 +216,7 @@ footer img:hover {
     100%{
         transform: translate(0, 0);
     }
-}
+} */
 
 .curso {
     position: absolute;
@@ -198,10 +227,7 @@ footer img:hover {
 }
 
 
-@media (min-width: 150px) and (max-width: 600px) {
-
-
-
+@media (min-width: 120px) and (max-width: 600px) {
 
 
     body {
@@ -226,8 +252,8 @@ footer img:hover {
     }
 
     nav {
-        font-size: 0.7rem;
-        
+        font-size: 0.5rem;
+        flex-direction: column;
 
     }
 
@@ -256,6 +282,41 @@ footer img:hover {
         gap: 20px;
     }
 
+    @keyframes moverItem{
+        0%{
+            top: 40%;
+            left: 30%;
+        }
+
+        25%{
+           top: 80%;
+           left: 40%;
+        }
+
+        50%{
+            top: 60%;
+            left: 15%;
+
+        }
+
+        75%{
+            top: 30%;
+            left: 20%;
+        }
+    
+        100%{
+            top: 40%;
+            left: 50%;
+    
+        }
+
+    }
+
+    .experiencias {
+        animation: moverItem 4s linear infinite;
+        transform: rotate(30drg);
+    }
+
 }
 
 
@@ -270,8 +331,6 @@ footer img:hover {
 
     body {
         overflow: auto;
-
-
     }
 
     a {
